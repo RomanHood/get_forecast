@@ -1,0 +1,113 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=31401&key=AIzaSyAyw6qVofFlAbvkeH46PV_zB6Crs_y9qx4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v2.7.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type:
+      - application/json; charset=UTF-8
+      date:
+      - Fri, 03 Mar 2023 09:28:45 GMT
+      pragma:
+      - no-cache
+      expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      cache-control:
+      - no-cache, must-revalidate
+      vary:
+      - Accept-Language
+      access-control-allow-origin:
+      - "*"
+      server:
+      - mafe
+      content-length:
+      - '1886'
+      x-xss-protection:
+      - '0'
+      x-frame-options:
+      - SAMEORIGIN
+      server-timing:
+      - gfet4t7; dur=90
+      alt-svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+    body:
+      encoding: UTF-8
+      string: |
+        {
+           "results" : [
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "31401",
+                       "short_name" : "31401",
+                       "types" : [ "postal_code" ]
+                    },
+                    {
+                       "long_name" : "Savannah",
+                       "short_name" : "Savannah",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Chatham County",
+                       "short_name" : "Chatham County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Georgia",
+                       "short_name" : "GA",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Savannah, GA 31401, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 32.111708,
+                          "lng" : -81.04619009999999
+                       },
+                       "southwest" : {
+                          "lat" : 32.048613,
+                          "lng" : -81.1162399
+                       }
+                    },
+                    "location" : {
+                       "lat" : 32.081259,
+                       "lng" : -81.0809848
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 32.111708,
+                          "lng" : -81.04619009999999
+                       },
+                       "southwest" : {
+                          "lat" : 32.048613,
+                          "lng" : -81.1162399
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJo7Bznm6e-4gRR3wvOA6svgw",
+                 "types" : [ "postal_code" ]
+              }
+           ],
+           "status" : "OK"
+        }
+  recorded_at: Fri, 03 Mar 2023 09:28:45 GMT
+recorded_with: VCR 6.1.0

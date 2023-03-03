@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.shared_examples 'a valid location' do |location|
-  it 'returns coordinates for a given city' do
+  it 'returns coordinates for a given location string' do
     VCR.use_cassette(location) do
       coordinates = subject.call(location)
 
@@ -18,17 +18,19 @@ RSpec.describe GetCoordinates do
   describe '.call' do
     subject { described_class }
 
-    VCR.use_cassette('memphis_tn') do
-      include_examples "a valid location", "Memphis, TN"
-    end
-    VCR.use_cassette('80202') do
-      include_examples "a valid location", "80020"
-    end
-    VCR.use_cassette('1600_pennsylvania') do
-      include_examples "a valid location", "1600 Pennsylvania Ave NW, Washington, DC 20500"
+    context "when given a valid location string (address, city, state, zip, etc.)" do
+      VCR.use_cassette('memphis_tn') do
+        include_examples "a valid location", "Memphis, TN"
+      end
+      VCR.use_cassette('31401') do
+        include_examples "a valid location", "31401"
+      end
+      VCR.use_cassette('1600_pennsylvania') do
+        include_examples "a valid location", "1600 Pennsylvania Ave NW, Washington, DC 20500"
+      end
     end
 
-    context 'when the location is invalid' do
+    context 'when given an invalid location string' do
       it 'returns nil' do
         VCR.use_cassette('bad_address') do
           coordinates = subject.call('advj 444kh bsddv')

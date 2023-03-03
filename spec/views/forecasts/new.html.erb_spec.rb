@@ -1,7 +1,6 @@
-require 'rails_helper'
 
 RSpec.describe "forecasts/new", type: :view do
-  it "renders new url form" do
+  it "renders address form" do
     render
 
     assert_select "form[action=?][method=?]", get_forecast_path, "get" do
