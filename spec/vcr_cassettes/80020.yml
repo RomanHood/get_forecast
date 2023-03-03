@@ -1,0 +1,111 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=80020&key=AIzaSyAyw6qVofFlAbvkeH46PV_zB6Crs_y9qx4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v2.7.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type:
+      - application/json; charset=UTF-8
+      date:
+      - Fri, 03 Mar 2023 05:37:42 GMT
+      pragma:
+      - no-cache
+      expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      cache-control:
+      - no-cache, must-revalidate
+      vary:
+      - Accept-Language
+      access-control-allow-origin:
+      - "*"
+      x-goog-maps-metro-area:
+      - Denver, CO
+      server:
+      - mafe
+      content-length:
+      - '1795'
+      x-xss-protection:
+      - '0'
+      x-frame-options:
+      - SAMEORIGIN
+      server-timing:
+      - gfet4t7; dur=139
+      alt-svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+    body:
+      encoding: UTF-8
+      string: |
+        {
+           "results" : [
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "80020",
+                       "short_name" : "80020",
+                       "types" : [ "postal_code" ]
+                    },
+                    {
+                       "long_name" : "Westminster",
+                       "short_name" : "Westminster",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Colorado",
+                       "short_name" : "CO",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Westminster, CO 80020, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 39.97241289999999,
+                          "lng" : -105.015228
+                       },
+                       "southwest" : {
+                          "lat" : 39.8709229,
+                          "lng" : -105.1375789
+                       }
+                    },
+                    "location" : {
+                       "lat" : 39.93891989999999,
+                       "lng" : -105.0674317
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.97241289999999,
+                          "lng" : -105.015228
+                       },
+                       "southwest" : {
+                          "lat" : 39.8709229,
+                          "lng" : -105.1375789
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJC0JpR4mKa4cRE7ezxa1DeCs",
+                 "postcode_localities" : [ "Broomfield", "Louisville", "Westminster" ],
+                 "types" : [ "postal_code" ]
+              }
+           ],
+           "status" : "OK"
+        }
+  recorded_at: Fri, 03 Mar 2023 05:37:42 GMT
+recorded_with: VCR 6.1.0
