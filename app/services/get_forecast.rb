@@ -1,4 +1,4 @@
-class GetForecastService
+class GetForecast < ApplicationService
   attr_reader :api
 
   def initialize lat, lon

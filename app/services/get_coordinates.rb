@@ -1,9 +1,5 @@
-class GetCoordinatesService
+class GetCoordinates < ApplicationService
   attr_reader :location_string, :api
-
-  def self.call location_string
-    new(location_string).call
-  end
 
   def initialize(location_string)
     @location_string = location_string

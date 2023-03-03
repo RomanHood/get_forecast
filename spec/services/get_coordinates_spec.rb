@@ -14,12 +14,12 @@ RSpec.shared_examples 'a valid location' do |location|
   end
 end
 
-RSpec.describe GetCoordinatesService do
+RSpec.describe GetCoordinates do
   describe '.call' do
     subject { described_class }
 
-    VCR.use_cassette('denver_co') do
-      include_examples "a valid location", "denver,co"
+    VCR.use_cassette('memphis_tn') do
+      include_examples "a valid location", "Memphis, TN"
     end
     VCR.use_cassette('80202') do
       include_examples "a valid location", "80020"

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe GetForecastService do
+RSpec.describe GetForecast do
   subject { described_class }
 
   describe '.call' do
