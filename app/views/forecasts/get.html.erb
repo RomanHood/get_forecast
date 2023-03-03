@@ -1,0 +1,17 @@
+Location: <%= params[:address] %>
+Current Temperature: <%= @forecast[:current_temperature] %>
+
+<table>
+  <tr>
+    <th>Day</th>
+    <th>High</th>
+    <th>Low</th>
+  </tr>
+  <% @forecast[:forecast].each do |day, f| %>
+    <tr>
+      <td><%= day %></td>
+      <td><%= f[:max] %></td>
+      <td><%= f[:min] %></td>
+    </tr>
+  <% end %>
+</table>

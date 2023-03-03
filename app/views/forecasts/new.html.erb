@@ -1,0 +1,4 @@
+<%= form_with url: get_forecast_path, method: 'get' do |f| %>
+  <%= f.text_field :address %>
+  <%= f.submit "Get Forecast" %>
+<% end %>

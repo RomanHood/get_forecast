@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.open-meteo.com/v1/gfs?current_weather=true&daily%5B%5D=temperature_2m_max&daily%5B%5D=temperature_2m_min&lat=37.8267&latitude=37.8267&lon=-122.4233&longitude=-122.4233&temperature_unit=fahrenheit&timezone=auto
+    uri: https://api.open-meteo.com/v1/gfs?current_weather=true&daily%5B%5D=temperature_2m_max&daily%5B%5D=temperature_2m_min&latitude=37.8267&longitude=-122.4233&temperature_unit=fahrenheit&timezone=auto
     body:
       encoding: US-ASCII
       string: ''
@@ -17,7 +17,7 @@ http_interactions:
       message: OK
     headers:
       date:
-      - Fri, 03 Mar 2023 06:44:02 GMT
+      - Fri, 03 Mar 2023 07:16:26 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -28,6 +28,6 @@ http_interactions:
       - gzip
     body:
       encoding: UTF-8
-      string: '{"latitude":37.78929,"longitude":-122.422,"generationtime_ms":0.9629726409912109,"utc_offset_seconds":-28800,"timezone":"America/Los_Angeles","timezone_abbreviation":"PST","elevation":23.0,"current_weather":{"temperature":44.6,"windspeed":9.6,"winddirection":283.0,"weathercode":0,"time":"2023-03-02T22:00"},"daily_units":{"time":"iso8601","temperature_2m_max":"°F","temperature_2m_min":"°F"},"daily":{"time":["2023-03-02","2023-03-03","2023-03-04","2023-03-05","2023-03-06","2023-03-07","2023-03-08"],"temperature_2m_max":[55.7,54.8,50.0,50.1,51.9,52.6,52.0],"temperature_2m_min":[38.5,42.4,41.6,41.4,41.4,41.6,44.2]}}'
-  recorded_at: Fri, 03 Mar 2023 06:44:01 GMT
+      string: '{"latitude":37.78929,"longitude":-122.422,"generationtime_ms":1.083970069885254,"utc_offset_seconds":-28800,"timezone":"America/Los_Angeles","timezone_abbreviation":"PST","elevation":23.0,"current_weather":{"temperature":44.0,"windspeed":8.8,"winddirection":289.0,"weathercode":0,"time":"2023-03-02T23:00"},"daily_units":{"time":"iso8601","temperature_2m_max":"°F","temperature_2m_min":"°F"},"daily":{"time":["2023-03-02","2023-03-03","2023-03-04","2023-03-05","2023-03-06","2023-03-07","2023-03-08"],"temperature_2m_max":[55.7,54.8,50.0,50.1,51.9,52.6,52.0],"temperature_2m_min":[38.5,42.4,41.6,41.4,41.4,41.6,44.2]}}'
+  recorded_at: Fri, 03 Mar 2023 07:16:26 GMT
 recorded_with: VCR 6.1.0

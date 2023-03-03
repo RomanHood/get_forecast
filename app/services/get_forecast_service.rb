@@ -25,8 +25,6 @@ class GetForecastService
 
   def build_request_params
     {
-      lat: @lat,
-      lon: @lon,
       temperature_unit: 'fahrenheit',
       current_weather: true,
       daily: ["temperature_2m_max", "temperature_2m_min"],
