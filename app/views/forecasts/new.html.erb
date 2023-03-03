@@ -1,4 +1,6 @@
-<%= form_with url: get_forecast_path, method: 'get' do |f| %>
-  <%= f.text_field :address %>
-  <%= f.submit "Get Forecast" %>
+<%= turbo_frame_tag "address_form" do %>
+  <%= form_with url: get_forecast_path, method: 'get', data: {turbo: false} do |f| %>
+    <%= f.text_field :address %>
+    <%= f.submit "Get Forecast" %>
+  <% end %>
 <% end %>

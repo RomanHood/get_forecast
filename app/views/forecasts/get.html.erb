@@ -1,5 +1,6 @@
-Location: <%= params[:address] %>
-Current Temperature: <%= @forecast[:current_temperature] %>
+<%= turbo_frame_tag "address_form", src: root_path, target: "_top" %>
+<p>Location: <%= params[:address] %></p>
+<p>Current Temperature: <%= @forecast[:current_temperature] %></p>
 
 <table>
   <tr>
