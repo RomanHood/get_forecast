@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "GetForecasts", type: :request do
+RSpec.describe "Get Forecast", type: :feature do
   it "fetches forecasts" do
     allow_any_instance_of(GetCoordinates).to receive(:call).and_return({lat: 51.5074, lon: 0.1278})
     allow_any_instance_of(GetForecast).to receive(:call).and_return({
@@ -32,6 +32,6 @@ RSpec.describe "GetForecasts", type: :request do
     visit root_path
     fill_in "address", with: "123 Main St, Anytown, USA"
     click_button "Get Forecast"
-    expect(page).to have_content("Current Temperature: 70")
+    expect(page).to have_content("Current Temperature: 79")
   end
 end
