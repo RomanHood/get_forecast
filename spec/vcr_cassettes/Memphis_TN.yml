@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://maps.googleapis.com/maps/api/geocode/json?address=Memphis%2C+TN&key=AIzaSyAyw6qVofFlAbvkeH46PV_zB6Crs_y9qx4
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=Memphis%2C+TN&key=<API_KEY>
     body:
       encoding: US-ASCII
       string: ''
@@ -19,7 +19,7 @@ http_interactions:
       content-type:
       - application/json; charset=UTF-8
       date:
-      - Fri, 03 Mar 2023 08:15:15 GMT
+      - Sat, 04 Mar 2023 20:06:53 GMT
       pragma:
       - no-cache
       expires:
@@ -39,7 +39,7 @@ http_interactions:
       x-frame-options:
       - SAMEORIGIN
       server-timing:
-      - gfet4t7; dur=64
+      - gfet4t7; dur=56
       alt-svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
     body:
@@ -104,5 +104,5 @@ http_interactions:
            ],
            "status" : "OK"
         }
-  recorded_at: Fri, 03 Mar 2023 08:15:15 GMT
+  recorded_at: Sat, 04 Mar 2023 20:06:53 GMT
 recorded_with: VCR 6.1.0

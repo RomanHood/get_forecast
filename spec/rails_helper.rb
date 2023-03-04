@@ -66,6 +66,11 @@ RSpec.configure do |config|
 end
 
 VCR.configure do |config|
+  config.filter_sensitive_data('<API_KEY>') do |interaction|
+    if (match = interaction.request.uri.match /(?<=key=).*(?=&)?/)
+      match.to_s
+    end
+  end
   config.cassette_library_dir = Rails.root.join("spec", "vcr_cassettes")
   config.hook_into :faraday
 end
